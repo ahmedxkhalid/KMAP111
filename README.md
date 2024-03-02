@@ -6,7 +6,7 @@ pip install -r requirementes.txt
 python3 manage.py runserver  
 ```
 <br>
-<h1>linux </h1>
+<h1>Microsoft</h1>
 
 ```
 ./env/bin/activate.bat
