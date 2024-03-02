@@ -1,7 +1,0 @@
-recursive-include doc *.rst
-recursive-include tests *.py
-include doc/conf.py
-include HISTORY.rst
-include README.md
-include LICENSE
-include site.cfg

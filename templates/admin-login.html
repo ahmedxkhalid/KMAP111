@@ -9,16 +9,16 @@
     <form action="{% url 'admin-panel' %}" method="post">
         {% csrf_token %}
     <div class="mb-3">
-        <label for="username" class="form-label"><b>Username</b></label>
+        <label for="username" class="form-label"><b>Admin Username</b></label>
         <input type="text" class="form-control" id="username" name="uname">
     </div>
     <div class="mb-3">
-        <label for="password" class="form-label"><b>Password</b></label>
+        <label for="password" class="form-label"><b>Admin Password</b></label>
         <input type="password" class="form-control" id="password" name="pwd">
     </div>
     <div class="mb-3">
         <input type="submit" class="btn btn-success" value="Login">
-    </div>
+    </div> 
     </form>
 </div>
 {% endblock %}
