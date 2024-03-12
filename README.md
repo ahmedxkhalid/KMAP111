@@ -14,19 +14,26 @@ pip (Verify using pip --version)
 1- Clone Repo
 
 <code>
-git clone https://github.com/topics/student-result-management-system
+git clone https://github.com/ahmedxkhalid/KMAP111
 </code>
 
 <br>
 2- Active the Env
 
 ```
+python3 -m virtualenv env
 source env/bin/active
 ```
   in [Windows](https://virtualenv.pypa.io/en/latest/user_guide.html) you can just run
 
 ```
+python3 -m virtualenv env
 ./bin/active
+```
+or 
+```
+python3 -m venv env
+./Script/active
 ```
 
 [ReadMore]( https://virtualenv.pypa.io/en/latest/user_guide.html) : link here <a hafr>https://virtualenv.pypa.io/en/latest/user_guide.html</a>
