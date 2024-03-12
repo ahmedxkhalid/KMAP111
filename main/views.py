@@ -1,12 +1,11 @@
-from django.http.response import HttpResponse
 from django.shortcuts import render, redirect
 from .models import Student
 
 def index(request):
     if 'user' in request.session:
-        return render(request, 'admin_panel.html')
+        return render(request, 'index.html')
     else:
-        return render(request, 'admin-login.html')
+        return render(request, 'index.html')
 
 def admin_login(request):
     if 'user' in request.session:
@@ -41,19 +40,33 @@ def delete_student(request, id):
 def edit_confirm(request, id):
 
     if request.method == 'POST':
+
         get_stu = Student.objects.get(id=id)
+
         get_stu.name = request.POST.get('sname', get_stu.name)
+
         get_stu.roll_no = request.POST.get('roll_no', get_stu.roll_no)
+
         get_stu.accounting = int(request.POST.get('accounting', get_stu.accounting))
+
         get_stu.decision_support = int(request.POST.get('decision_support', get_stu.decision_support))
+
         get_stu.information_security = int(request.POST.get('information_security', get_stu.information_security))
+
         get_stu.english_accounting = int(request.POST.get('english_accounting', get_stu.english_accounting))
+
         get_stu.personnel_management = int(request.POST.get('personnel_management', get_stu.personnel_management))
 
+
         total = get_stu.accounting + get_stu.decision_support + get_stu.information_security + get_stu.english_accounting + get_stu.personnel_management
+
         get_stu.total = total
+
         get_stu.percent = total / 500 * 100  # Assuming maximum score is 100 for each subject
+
         get_stu.save()
+
+        
 
         return redirect('/admin_panel')
 
@@ -67,7 +80,7 @@ def admin_logout(request):
 
 def add_student(request):
     return render(request, 'add_student.html')
-    
+
 def edit_student(request, id):
 
     get_stu = Student.objects.get(id=id)
