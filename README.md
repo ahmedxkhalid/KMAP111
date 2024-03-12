@@ -12,10 +12,9 @@ pip (Verify using pip --version)
 
 ### Installation:
 1- Clone Repo
-
-<code>
-git clone https://github.com/ahmedxkhalid/KMAP111
-</code>
+```
+git https://github.com/ahmedxkhalid/KMAP111.git
+```
 
 <br>
 2- Active the Env
