@@ -1,18 +1,12 @@
 import os
 from pathlib import Path
-import environ 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-env = environ.Env(
-      # set casting, default value
-      DEBUG=(bool,True)
-)
-
-environ.Env.read_env()
 
 SECRET_KEY = 'django-insecure-j+t3g33kwm7^mwe4y6)5xyixkq4gadiuv2fn)@dk2e*t1)4yu)'
 
-DEBUG = env('DEBUG')
+DEBUG = True
 
 ALLOWED_HOSTS = [
   
@@ -46,7 +40,7 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -98,7 +92,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'EET'
 
 USE_I18N = True
 
