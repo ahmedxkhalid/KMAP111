@@ -5,8 +5,8 @@
 {% endblock %}
 
 {% block body %}
-<div class="container w-25">
-    <h3>إضافة طالب</h3>
+<div class="container w-50 mt-3">
+    <h2>إضافة طالب</h2>
     <form action="{% url 'add_confirm' %}" method="post">
         {% csrf_token %}
         <div class="mb-3">

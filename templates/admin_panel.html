@@ -8,7 +8,7 @@
 <div class="container-fluid my-3">
     <a href="{% url 'add_student' %}" class="btn btn-warning">إضافة طالب</a>
 </div>
-<table class="table table-primary my-4 table-hover">
+<table class="container table-striped table-dark table  my-4 table-hover">
     <thead>
         <tr>
             <th scope="col">رقم اللفة</th>
@@ -36,8 +36,8 @@
             <td>{{ s.total }}</td>
             <td>{{ s.percent }}</td>
             <td>
-                <a href="{% url 'edit_student' s.id %}" class="btn btn-small btn-primary" id='{s.id}'>Edit</a>
-                <a href="{% url 'delete_student' s.id %}" class="btn btn-small btn-danger" id='{s.id}'>Delete</a>
+                <a href="{% url 'edit_student' s.id %}" class="btn btn-small btn-primary container m-1" id='{s.id}'>Edit</a>
+                <a href="{% url 'delete_student' s.id %}" class="btn btn-small btn-danger container m-1" id='{s.id}'>Delete</a>
             </td>
         </tr>
         {% endfor %}
